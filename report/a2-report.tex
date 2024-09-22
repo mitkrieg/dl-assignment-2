@@ -4,7 +4,7 @@
 
 
 \title{CS5787: Exercises 2 \\ \begin{small}\url{FULL_CODE_FOLDER_URL}\end{small}}
-\author{Full Name \\ Net ID \and \textbf{Full Name} \\ Net ID}
+\author{Mitchell Krieger \\ mak483@cornell.edu}
 
 \date{}
 
@@ -20,7 +20,8 @@
 \todo{Provide your answers to Question 2 here. }
 
 \section{Theory: Question 3 [10 pts]}
-\todo{Provide your answers to Question 3 here.}
+
+In a LSTM cell there are 4 different gates each with its own learnable parameters. For a LSTM with an input of 200 and a hidden state of 200 each gate will have an input weight matrix of 200x200 so that the output of the gate will be a vector of 200 units. The same is true for the hidden state weight matrix. Lastly, each gate has a bias vector of 200. So for one gate there will be 200x200 + 200x200 + 200 = 80200 parameters. Since there are 4 gates, we can multiply this number by 4 to get the total number of 80200 x 4 = 320400 parameters in the LSTM cell.
 
 \section{Theory: Question 4 [20 pts]}
 \todo{Provide your answers to Question 4 here.}
