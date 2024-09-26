@@ -21,7 +21,7 @@
 
 \begin{enumerate}[label=\alph*)]
     \item One way to deal with variable length input sequences is to pad sequences using a special token to be the same length as the length of the longest sequence. This method is simple and easy to implement approach makes it so that you can run inputs through transformations in the network, without loss of data. However, there is wasted computation and on the pads and if the inputs have a high variation in length it could negatively impact performance.
-    \item To handle outputs of varying length we can append to the end of each input sequence a end of sequence (EOS) token. That way the model will be trained to predict when the next token should be the end of the sequence, thus indicating that the sequence should end. This could add to the total overall loss because if the model predicts EOS to0 soon or too late, that additional mistake contributes to the overal loss. 
+    \item To handle outputs of varying length we can append to the end of each input sequence a end of sequence (EOS) token. That way the model will be trained to predict when the next token should be the end of the sequence, thus indicating that the sequence should end. This could add to the total overall loss because if the model predicts EOS too soon or too late, that additional mistake contributes to the overal loss. 
 \end{enumerate}
 
 \section{Theory: Question 2 [10 pts]}
