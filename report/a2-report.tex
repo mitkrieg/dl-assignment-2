@@ -118,7 +118,7 @@ In total, we built four models: two LSTM models and two GRU models, using the ab
     
 \end{table}
 
-Looking at the performance metrics we see that on both models that were not regularized with drop out, the generalization error is worse: there's a delta between the train perplexity and the validation perplexity of ~65 the LSTM. Where as in the regularized LSTM, the generalization error is only around ~38 on the LSTM. This same behavior is not immediately apparent in the GRU, those models have a delta of 42 to 46. However, when you look at the convergence graphs below and also note that the GRU with dropout does have a better validation and test perplexity, we can begin to understand that dropout helped the GRU learn the dataset better.
+Looking at the performance metrics we see that on both models that were not regularized with drop out, the generalization error is worse: there's a delta between the train perplexity and the validation perplexity of ~65 for the LSTM. Where as in the regularized LSTM, the generalization error is only around ~38 on the LSTM. This same behavior is not immediately apparent in the GRU, those models have a delta of 42 to 46. However, when you look at the convergence graphs below and also note that the GRU with dropout does have a better validation and test perplexity, we can begin to understand that dropout helped the GRU learn the dataset better.
 
 
 
@@ -156,6 +156,6 @@ Consider how quickly the gap between train and test perplexity on the GRU withou
 
 We can observe a similar behavior in the LSTM convergence graphs although the LSTM without regularization gets wider even faster than the GRU does. This is perhaps because there are many more learnable parameters in an LSTM than there is in a GRU because an LSTM has an additional gate. Because of this it is particularly important when using LSTMs and GRUs to regularize them to make sure that generalization error is minimized and the model performs well on the validation and tests sets, not just the training data.
 
-When testing the model, it is also easy to see that although we've been able to bring down the perplexity score a decent amount the output of the model doesn't present as true natural language. This makes sense for such a simple architecture. A better language model would probably require additional RNN layers and/or more advanced architectures like encode-decoder networks with attention or transformers.
+When testing the model, it is also easy to see that although we've been able to bring down the perplexity score a decent amount, the output of the model doesn't present as true natural language. For example, if we feed in the string, "the financial outlook has become strong for a company that has had a tough", the model produces "company times for been a <eos> the year <eos> would been a N impact", which doesn't make a whole tone of sense. This poor performance could be the result of such a simple architecture. A better language model would probably require additional RNN layers and/or more advanced architectures like encode-decoder networks with attention or transformers.
 
 \end{document}
