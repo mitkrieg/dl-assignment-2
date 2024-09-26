@@ -58,6 +58,27 @@ A `ZarembaRNN` pytorch nn.module is created with similar architecture yet flexib
 
 Training & evaluation functions are also provided for easy training.
 
+```python
+decay_start = 11
+learning_rate_decay = 0.75
+lr = 6
+dropout_rate = 0.5
+lstm_dropout = 0.2
+
+def lr_lambda(epoch):
+    if epoch < decay_start:
+        return 1
+    else:
+        return learning_rate_decay ** (epoch - (decay_start-1))
+
+model = ZamrembaRNN('lstm', len(train.vocab), dropout=dropout_rate, rnn_dropout=lstm_dropout).to(device)
+sgd = optim.SGD(model.parameters(), lr=lr)
+cross_entropy = nn.CrossEntropyLoss()
+schedule = optim.lr_scheduler.LambdaLR(sgd, lr_lambda)
+
+final_metrics = train_network(model, datasets, cross_entropy, sgd, schedule, device, 25, 500)
+```
+
 
 ### Loading & saving
 
