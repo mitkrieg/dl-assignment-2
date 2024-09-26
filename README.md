@@ -10,7 +10,7 @@ The first part is theoretical. All of its materials including a LaTex file and i
 
 ## Practical
 
-The second part of the assignment is practical. It is contained in the [assignment1_practical.ipynb](./assignment1_practical.ipynb) notebook. 
+The second part of the assignment is practical. It is contained in the [assignment2_practical.ipynb](./assignment2_practical.ipynb) notebook. 
 
 ### Setup
 All code, including data download, model definitions, training loops, hyperparameter tuning and evaluation should be runable from top to bottom of the notebook with reproduceable results by creating a virtual environment, installing the packages in requirements.txt, and logging into Weights & Biases.
