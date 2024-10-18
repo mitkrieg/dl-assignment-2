@@ -1,5 +1,4 @@
-# CS 5787 Deep Learning Assignment #1 - DL Basics
-
+# CS 5787 Deep Learning Assignment #2 - LSTM & GRU
 Authors: Mitchell Krieger
 
 This repository contains materials to complete the [second assigment](./CS%205787%20-%20EX%202.pdf) for CS 5787 at Cornell Tech in the Fall 2024 semester. There are two parts to this assignment, the theoretical part and the practical part. 
